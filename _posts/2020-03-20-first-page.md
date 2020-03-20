@@ -1,3 +1,9 @@
+---
+title: "Welcome to euphoria!"
+date: 2020-03-20 16:10
+categories: Introduction
+---
+
 Hi, there!!
 
 This is blog or portfolio of projects by euphoria.
