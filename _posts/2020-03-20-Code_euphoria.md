@@ -1,5 +1,5 @@
 ---
-title: "스미싱 문자 예측"
+title: "Dacon: 스미싱 문자 예측"
 date: 2020-03-20 16:40
 categories: projects
 ---
@@ -69,7 +69,6 @@ Summary:
 - 모델 재생산성(reproducible results)을 위해 tensorflow seed, random seed, os seed 등을 고정시켰습니다.
 - 제출 시 모델 학습 및 예측 파일이 나뉘어져 있어 학습한 model, tokenizer 등은 함수를 만들어 따로 저장하고 로드 하였습니다.
 
----------
 
 ## 3. 분석 과정
 
