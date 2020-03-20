@@ -8,7 +8,7 @@ categories: projects
 ## euphoria , 2020.01.17
 
 ~~~
-Subtitle: Predict smishing from text message
+<span style="font-family:Ubuntu">Subtitle: Predict smishing from text message</span>
 Tags: #finance #text #nlp #textanalysis
 Period: 2019.11.21 ~ 2020.01.20
 Tools: Python, Tensorflow, Keras, Ubuntu, Colab
