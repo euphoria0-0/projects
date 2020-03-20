@@ -1,18 +1,78 @@
 ---
-title: "projects"
+title: "스미싱 문자 예측"
 date: 2020-03-20 16:40
 categories: projects
 ---
 
+# Dacon 14회 KB 금융문자 분석 모델링 경진대회
+## euphoria , 2020.01.17
 
-## Dacon 14회 KB 금융문자 분석 모델링 경진대회
-### euphoria , 2020.01.17
-### Summary
-1. Text Cleaning and make Bi-gram
-2. Data Sampling
-3. Text Preprocessing with tf.keras.Tokenizer and pad_sequences
-4. train Bi-Directional LSTM model
-5. Prediction
+~~~
+Subtitle: Predict smishing from text message
+Tags: #finance #text #nlp #textanalysis
+Period: 2019.11.21 ~ 2020.01.20
+Tools: Python, Tensorflow, Keras, Ubuntu, Colab
+Summary:
+   1. Data Preparation
+      (a) Data Cleaning with Mecab
+      (b) Make Bi-gram
+      (c) Data Sampling (mixed sampling)
+      (d) transform text to sequences
+   2. Build Model - Bi-Directional LSTM
+   3. Prediction
+~~~
+
+## 1. 대회 요약
+ - dacon 14th : 금융문자 분석 경진대회
+ - 주최: KB금융지주, DACON , KISA(한국인터넷진흥원)
+ - 데이터: KB금융그룹 및 KISA(한국인터넷진흥원)에서 제공받은 정상문자와 스미싱 문자
+    - 운영정책 및 개인정보보호를 위하여 대회 이후 데이터 다운로드 및 공유가 제한되어 있음
+ - 결과: Public 17th, Private 10th score
+    
+## 2. 분석 과정 요약
+
+1. EDA
+- 데이터 불균형
+  - 정상인 문자 277,242건, 스미싱 문자 18,703건으로 데이터 불균형 현상(93.7%:6.3%)
+  - <code> Counter({0: 277242, 1: 18703})
+  0.0631975535994864 </code>
+
+2. Sampling
+- Mixed Sampling
+  - 정상 문자 중 93,515건 __비복원추출__, 스미싱 문자 18,703x2건을 __복원추출__
+  
+3. Preprocessing
+- Text Cleaning
+  - Mecab을 이용하여 텍스트를 정제합니다.
+    - 영문은 소문자화하고 한글, 영문 제외 모두 제거하였습니다.
+    - 영문 중 xxx 등으로 비식별처리된 정보(개인,금융회사)는 모두 제거하였습니다.
+    - 속도(inference time)을 고려해야 하므로 빠른 Mecab 형태소 분석기를 선택하였습니다.
+  - Bi-gram을 생성합니다.
+  - 모델을 학습하기 위해 텍스트 데이터를 시퀀스 데이터로 변환합니다. (integer encoding)
+  - max_len을 정하기 위해 EDA를 하여 적당한 len을 결정하였습니다.
+
+4. Modeling
+- 시도한 모델들
+  - Baseline: RandomForest, Logistic Regression, Naive Bayes 등 사용
+  - RNN: Simple RNN, LSTM, GRU, Bi-Directed LSTM, Bi-Directed GRU
+  - CNN+RNN: ConvRNN, ConvLSTM, ConvGRU
+- Build Model
+  - 모델 평가 지표는 AUC입니다.
+  - 모델은 Bi-LSTM (Bi-Directional Long Short Term Memory)을 사용하였습니다.
+  - 텍스트는 Bi-gram을 sequence로 변환한 데이터로 학습하였습니다.
+  - EarlyStopping으로 과도한 학습을 하지 않고 적당한 score에 도달하면 조기종료 할 수 있도록 합니다.
+ 
+5. Predict and Submission
+- Submission for Public and Private
+- __issue : Inference time (스미싱 문자 예측에 걸리는 시간) 순위 30% 점수 반영__
+  - train된 모델이 있을 때 test 데이터를 올바른 형태로 전처리+predict하는 시간입니다 (train 전처리와 모델 training 시간은 포함되지 않습니다).
+- 모델 재생산성(reproducible results)을 위해 tensorflow seed, random seed, os seed 등을 고정시켰습니다.
+- 제출 시 모델 학습 및 예측 파일이 나뉘어져 있어 학습한 model, tokenizer 등은 함수를 만들어 따로 저장하고 로드 하였습니다.
+
+---------
+
+## 3. 분석 과정
+
 
 ## 1. 라이브러리 및 데이터
 ### 1-1. Import libraries
@@ -125,7 +185,7 @@ Counter(train['smishing'])
 
 
 
-- 6.31975535994864%의 비율만이 스미싱 문자임을 알 수 있습니다.
+- <code>6.32%</code>의 비율만이 스미싱 문자임을 알 수 있습니다.
 - 즉, 데이터 불균형 문제(Data Imbalance Problem)가 발생하였습니다.
 - 따라서 데이터를 혼합하여 샘플링하였습니다.
 
