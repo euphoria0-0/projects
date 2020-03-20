@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Su Yeong"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/1.jpg"
   bio              : "euphoria, to be Data Specialist"
   location         : "Seoul, Korea"
   email            :
