@@ -31,7 +31,7 @@ Summary:
     
 ## 2. 분석 과정 요약
 
-<span style="font-family:Ubuntu">1. EDA</span>
+<span style="font-family:Ubuntu Mono">1. EDA</span>
 - 데이터 불균형
   - 정상인 문자 277,242건, 스미싱 문자 18,703건으로 데이터 불균형 현상(93.7%:6.3%)
   - <code> Counter({0: 277242, 1: 18703})
