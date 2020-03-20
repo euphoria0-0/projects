@@ -8,7 +8,7 @@ categories: projects
 ## euphoria , 2020.01.17
 
 ~~~
-<span style="font-family:Ubuntu">Subtitle: Predict smishing from text message</span>
+Subtitle: Predict smishing from text message
 Tags: #finance #text #nlp #textanalysis
 Period: 2019.11.21 ~ 2020.01.20
 Tools: Python, Tensorflow, Keras, Ubuntu, Colab
@@ -31,7 +31,7 @@ Summary:
     
 ## 2. 분석 과정 요약
 
-1. EDA
+<span style="font-family:Ubuntu">1. EDA</span>
 - 데이터 불균형
   - 정상인 문자 277,242건, 스미싱 문자 18,703건으로 데이터 불균형 현상(93.7%:6.3%)
   - <code> Counter({0: 277242, 1: 18703})
