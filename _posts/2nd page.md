@@ -1,5 +1,5 @@
 ---
-title: "Welcome to euphoria!"
+title: "projects"
 date: 2020-03-20 16:11
 categories: projects
 ---
