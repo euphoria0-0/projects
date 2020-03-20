@@ -1,3 +1,10 @@
+---
+title: "projects"
+date: 2020-03-20 16:40
+categories: projects
+---
+
+
 ## Dacon 14회 KB 금융문자 분석 모델링 경진대회
 ### euphoria , 2020.01.17
 ### Summary
@@ -330,3 +337,6 @@ def get_prediction(test_file_path):
 ```python
 y_pred = get_prediction('0_Data/public_test.csv')
 ```
+
+
+
