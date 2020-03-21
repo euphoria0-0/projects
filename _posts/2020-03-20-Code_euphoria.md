@@ -32,7 +32,7 @@ Summary:
     
 ## 2. 분석 과정 요약
 
-<img src="./image/8_process.png">
+<img src="./images/8_process.png">
 
 1. EDA
 
