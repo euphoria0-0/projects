@@ -34,19 +34,19 @@ Summary:
 
 <img src="./images/8_process.png">
 
-1. EDA
+#### 1. EDA
 
  - 데이터 불균형
    - 정상인 문자 277,242건, 스미싱 문자 18,703건으로 데이터 불균형 현상(93.7%:6.3%)
    - <code> Counter({0: 277242, 1: 18703})
   0.0631975535994864 </code>
 
-2. Sampling
+#### 2. Sampling
 
  - Mixed Sampling
    - 정상 문자 중 93,515건 __비복원추출__, 스미싱 문자 18,703x2건을 __복원추출__
   
-3. Preprocessing
+#### 3. Preprocessing
 
  - Text Cleaning
    - Mecab을 이용하여 텍스트를 정제합니다.
@@ -57,7 +57,7 @@ Summary:
    - 모델을 학습하기 위해 텍스트 데이터를 시퀀스 데이터로 변환합니다. (integer encoding)
      - max_len을 정하기 위해 EDA를 하여 적당한 len을 결정하였습니다.
 
-4. Modeling
+#### 4. Modeling
 
  - 시도한 모델들
    - Baseline: RandomForest, Logistic Regression, Naive Bayes 등 사용
@@ -70,7 +70,7 @@ Summary:
    - 텍스트는 Bi-gram을 sequence로 변환한 데이터로 학습하였습니다.
    - EarlyStopping으로 과도한 학습을 하지 않고 적당한 score에 도달하면 조기종료 할 수 있도록 합니다.
  
-5. Predict and Submission
+#### 5. Predict and Submission
 
  - Submission for Public and Private
  - __issue : Inference time (스미싱 문자 예측에 걸리는 시간) 순위 30% 점수 반영__
