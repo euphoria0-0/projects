@@ -7,7 +7,9 @@ categories: projects
 # Dacon 14회 KB 금융문자 분석 모델링 경진대회
 ## euphoria , 2020.01.17
 
-~~~
+---
+**NOTE**
+
 Subtitle: Predict smishing from text message
 Tags: #finance #text #nlp #textanalysis
 Period: 2019.11.21 ~ 2020.01.20
@@ -20,12 +22,6 @@ Summary:
       (d) transform text to sequences
    2. Build Model - Bi-Directional LSTM
    3. Prediction
-~~~
-
----
-**NOTE**
-
-It works with almost all markdown flavours (the below blank line matters).
 
 ---
 
