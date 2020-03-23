@@ -7,10 +7,7 @@ categories: projects
 # Dacon 14회 KB 금융문자 분석 모델링 경진대회
 ## euphoria , 2020.01.17
 
----
-**NOTE**
-
-Subtitle: Predict smishing from text message
+`Subtitle: Predict smishing from text message
 Tags: #finance #text #nlp #textanalysis
 Period: 2019.11.21 ~ 2020.01.20
 Tools: Python, Tensorflow, Keras, Ubuntu, Colab
@@ -21,24 +18,7 @@ Summary:
       (c) Data Sampling (mixed sampling)
       (d) transform text to sequences
    2. Build Model - Bi-Directional LSTM
-   3. Prediction
-
----
-
----
-header-includes:
-    - \usepackage[most]{tcolorbox}
-    - \definecolor{light-yellow}{rgb}{1, 0.95, 0.7}
-    - \newtcolorbox{myquote}{colback=light-yellow,grow to right by=-10mm,grow to left by=-10mm, boxrule=0pt,boxsep=0pt,breakable}
-    - \newcommand{\todo}[1]{\begin{myquote} \textbf{TODO:} \emph{#1} \end{myquote}}
----
-
-blah blah
-
-\todo{something}
-
-blah
-
+   3. Prediction `
 
 ## 1. 대회 요약
 
