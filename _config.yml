@@ -257,6 +257,11 @@ compress_html:
   ignore:
     envs: development
 
+# comments
+comments:
+  provider               : "disqus"
+  disqus:
+    shortname            : euphoria0-0 # Short-name
 
 # Defaults
 defaults:
@@ -268,6 +273,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
