@@ -25,8 +25,8 @@ Summary:
 ## 1. 대회 요약
 
 <span style = font-family : Nanum-Gothic;>- dacon 14th : 금융문자 분석 경진대회</span>
- - 주최: KB금융지주, DACON , KISA(한국인터넷진흥원)
- - 데이터: KB금융그룹 및 KISA(한국인터넷진흥원)에서 제공받은 정상문자와 스미싱 문자
+<span style = font-family : Nanum-Myeongjo;> - 주최: KB금융지주, DACON , KISA(한국인터넷진흥원)</span>
+<span style = font-family : Ubuntu-Mono;> - 데이터: KB금융그룹 및 KISA(한국인터넷진흥원)에서 제공받은 정상문자와 스미싱 문자</span>
     - 운영정책 및 개인정보보호를 위하여 대회 이후 데이터 다운로드 및 공유가 제한되어 있음
  - 결과: Public 17th, Private 10th score
     
