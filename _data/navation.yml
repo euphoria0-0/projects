@@ -1,0 +1,7 @@
+main:
+  - title: "About"
+    url: /About/
+  - title: "projects"
+    url: /projects/
+  - title: "External Link"
+    url: https://google.com
