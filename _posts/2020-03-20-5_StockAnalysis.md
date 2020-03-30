@@ -1,5 +1,5 @@
 ---
-title: "종목분석 리포트 분석하기"
+title: "종목분석 리포트 분석"
 date: 2020-03-20 16:14
 categories: projects
 ---
