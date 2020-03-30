@@ -4,11 +4,11 @@ date: 2020-03-20 16:14
 categories: projects
 ---
 
-## Stock Analysis from NAVER Finance
+## 주가 및 종목분석 리포트 분석
 ## euphoria, 2019.07.31
 
 ~~~
-subtitle: 네이버 금융에서 주가과 종목분석 리포트 분석하기
+subtitle: Stock Analysis from NAVER Finance
 tags: #stock #finance #analysis #nlp #textmining
 period: 2019.05.01 ~ 2019.07.31
 tools: Python, Tensorflow, Ubuntu
@@ -26,12 +26,20 @@ Summary:
 ~~~
 
 ## 1. 분석 프로젝트 요약
- - 
+ - Data Science Competition 2019 from NAVER
+ - NAVER Finance에서 주가 및 종목분석 리포트 분석하기
 
 ## 2. 분석 과정 요약
- - 
+ * 주제: 
+ 1. Data Preparation: 일 단위 주가, 증권사 종목분석 리포트
+ 2. EDA
+  - 
+  - 
+ 3. Analysis and Modeling
+ 4. Prediction
+ 
 
 ## 3. 분석 과정
- - 
+
  
 
