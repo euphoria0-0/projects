@@ -260,7 +260,7 @@ compress_html:
 comments:
   provider               : "disqus"
   disqus:
-    shortname            : euphoria0-0 # Short-name
+    shortname            : euphoria00 # Short-name
 
 # Defaults
 defaults:
