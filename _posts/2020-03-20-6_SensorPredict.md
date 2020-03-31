@@ -43,36 +43,37 @@ Summary:
   
 #### 2. Model
 
- (1) Dimension Reduction
+(1) Dimension Reduction
  
-    - kernel PCA를 이용하여 k=5의 주성분 생성
-    - GridSearchCV를 이용한 최적 파라미터 선정
+  - kernel PCA를 이용하여 k=5의 주성분 생성
+  - GridSearchCV를 이용한 최적 파라미터 선정
   
- (2) xgb, lgbm으로 예측
+(2) xgb, lgbm으로 예측
  
-    - GridSearchCV를 이용한 최적 파라미터 선정
-    - 평균으로 앙상블
-    -> WMAE 1.29
+  - GridSearchCV를 이용한 최적 파라미터 선정
+  - 평균으로 앙상블
+  -> WMAE 1.29
     
- (3) 시계열 특성 이용을 위한 LSTM 모형
+(3) 시계열 특성 이용을 위한 LSTM 모형
  
-    - Bi-directed LSTM
-    - CallBacks
-    -> WMAE 0.94
+  - Bi-directed LSTM
+  - CallBacks
+  -> WMAE 0.94
   
 #### 3. Prediction
 
- - Final Model: Bi-Directional LSTM model
- - 평가지표: 검증 데이터의 각 제품별 불량률에 대한 가중평균절대오차 WMAE:Weighted Mean Absolute Error) 측정값을 산출
+- Final Model: Bi-Directional LSTM model
+- 평가지표: 검증 데이터의 각 제품별 불량률에 대한 가중평균절대오차 WMAE:Weighted Mean Absolute Error) 측정값을 산출
  
 #### 4. Comments
- - Good
+
+- Good
   - 가장 좋은 성능을 내는 모델 하나를 선택하기 보다 여러 모델을 Ensemble 한 모델을 선택하여 보다 모델의 bias 를 보완하고 딥러닝의 오버피팅 문제를 해소한다
   - 차원축소를 통해 85 개의 센서데이터가 설명하는 양 분산량 을 주성분을 통해 나타낼 수 있어 단순하면서 재사용가능한 알고리즘이다
- - Bad
+- Bad
   - Deep Learning 모델이 복잡해짐에 따라 학습시간이 크게 증가한다. 그 때문에 적합한 모델을 찾고 Hyper Parameter 를 찾는데 Grid Search 를 사용하였고 많은 시간을 소요하였다
   - 차원축소 기법에서는 시계열을 고려하지 않았다
- - Further work
+- Further work
   - 모델의 하이퍼파라미터를 찾는 데에 베이지안 최적화 방법을 이용하는 등 빠른 파라미터 서치가 필요하다
   - 투영 차원축소를 이용하였고 , 더 높은 성능을 확인할 수 있다면 매니폴드 방법도 시도할 수 있다
   - BiLSTM 모델의 성능을 
