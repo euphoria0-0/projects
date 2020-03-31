@@ -28,20 +28,33 @@ Summary:
  - Samsung SDS Brightics AI Academy 공모전: 데이터 분석 
 
 ## 2. 분석 과정 요약
+
+![process](/assets/images/6_process.png)
+
 #### 1. EDA
- - Outlier
+
+- Outlier
   - 상위 0.5% 제거
+  
 #### 2. Model
+
  1. Dimension Reduction
+ 
   - kernel PCA를 이용하여 k=5의 주성분 생성
   - GridSearchCV를 이용한 최적 파라미터 선정
+  
  2. xgb, lgbm으로 예측
+ 
   - GridSearchCV를 이용한 최적 파라미터 선정
   - 평균으로 앙상블
   - Bi-directed LSTM
+  
  3. 시계열 특성 이용을 위한 LSTM 모형
+ 
   - CallBacks
+  
 #### 3. Prediction
+
  - Final Model: Bi-Directional LSTM model
  
 ## 3. 분석 과정
