@@ -56,6 +56,7 @@ Summary:
 
 ## 1. Data Preparation
  - 모든 코드는 euphoria0-0 github 내 존재
+ 
 ```python
 def crawler(crpname, start_date='20090101', end_date='20190630'):
    '''
