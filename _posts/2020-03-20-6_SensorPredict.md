@@ -38,20 +38,20 @@ Summary:
   
 #### 2. Model
 
- 1. Dimension Reduction
+ (1) Dimension Reduction
  
-   - kernel PCA를 이용하여 k=5의 주성분 생성
-   - GridSearchCV를 이용한 최적 파라미터 선정
+    - kernel PCA를 이용하여 k=5의 주성분 생성
+    - GridSearchCV를 이용한 최적 파라미터 선정
   
- 2. xgb, lgbm으로 예측
+ (2) xgb, lgbm으로 예측
  
-   - GridSearchCV를 이용한 최적 파라미터 선정
-   - 평균으로 앙상블
-   - Bi-directed LSTM
+    - GridSearchCV를 이용한 최적 파라미터 선정
+    - 평균으로 앙상블
+    - Bi-directed LSTM
     
- 3. 시계열 특성 이용을 위한 LSTM 모형
+ (3) 시계열 특성 이용을 위한 LSTM 모형
  
-   - CallBacks
+    - CallBacks
   
 #### 3. Prediction
 
