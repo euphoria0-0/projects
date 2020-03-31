@@ -58,6 +58,27 @@ Summary:
   
 
 ## 1. Data Preparation
+ - 모든 코드는 euphoria0-0 github 내 존재
+```python
+def crawler(crpname, start_date='20090101', end_date='20190630'):
+   '''
+   1. crawling of analysis report from NAVER Finance
+   2. download pdf
+   3. read text of pdf
+   '''
+   return df
+```
+```python
+def crawler_naverfinance_stock(itemcode, start_date, end_date):
+   '''
+   crawler of stock price from NAVER Finance
+   '''
+   return df
+```
+```python
+if __name__ == "__main__":
+   crawler(crp_list)
+```
 
 ## 2. Analysis & Modeling
 
@@ -73,6 +94,19 @@ Summary:
 
 ![process](/assets/images/5_img1.png)
 
+```python
+from txt_preprocess import *
+from soynlp.noun import LRNounExtractor_v2
+from gensim.models import Doc2Vec
+
+text = txt_preprocess(raw_text)
+text = noun_extractor.train_extract(text)
+d2v_corpus = Doc2VecCorpus(text)
+d2v_model = Doc2Vec(d2v_corpus)
+tsne = TSNE(n_components=2)
+X_tsne = tsne.fit_transform(X[:100])
+fig = plt.figure()
+```
   
 ### 2. AutoEncoder & Classification
  - 사용한 변수 : 리포트의 투자의견 , 리포트 발간 날짜 기준 up_down, 증권사와의 베타계수 , 리포트 감정(긍/부/중), 강조 단어
@@ -85,6 +119,22 @@ Summary:
  - 각 증권사에서 pos, neg 값의 차가 크지 않기 때문에 중요한 변수가 아님을 확인할 수 있다
 
 ![process](/assets/images/5_img2.png)
+
+```python
+text = text_cleaning()
+def count_pos_neg(textdata,pn_dict=None):
+   '''
+   count numbers of positive/negative/neutral/intensity words
+   '''
+   return pos, neg, neut, intn
+pos,neg,neut,intn = count_pos_neg(df_text['text'])
+```
+
+```python
+from bokeh.plotting import figure, show, output_file
+# using bokeh library
+```
+
 
 
 ### 3. Analysis Sentence Similarity & Predict Stock Price
