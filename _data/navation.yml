@@ -1,7 +1,7 @@
 main:
   - title: "About"
     url: /About/
-  - title: "projects"
+  - title: "Projects"
     url: /projects/
-  - title: "External Link"
-    url: https://google.com
+  - title: "Blog"
+    url: https://euphoria0-0.github.io/
